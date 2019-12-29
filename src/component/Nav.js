@@ -42,9 +42,11 @@ class Nav extends React.Component{
     render(){
         return(
             <>
-            <Router>
+            {/* <Router> */}
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <h2 className="navbar-brand" href="test">MyKKBOX</h2>
+                    <h2 className="navbar-brand" href="test" onClick={() => {
+                        window.location.href = '/'
+                      }} style={{cursor:'pointer'}}>MyKKBOX</h2>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -78,7 +80,7 @@ class Nav extends React.Component{
                         <Route path="/hitList" component={()=><Home token= {this.state.token}/>}/>
                         <Route path="/themeList" component={()=><ThemeList token= {this.state.token}/>}/>
                     </Switch>
-                </Router>
+                {/* </Router> */}
             </>
         )
     }
