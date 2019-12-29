@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dragonleolin.github.io/testKKBox/precache-manifest.6b5306e8cbecd8f2658be21b01222296.js"
+  "/dragonleolin.github.io/testKKBox/precache-manifest.5eba4364f908c707ca8cc751e54e388a.js"
 );
 
 self.addEventListener('message', (event) => {
