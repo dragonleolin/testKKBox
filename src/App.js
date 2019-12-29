@@ -7,6 +7,7 @@ class App extends React.Component {
       return (
         <>
           <Nav />
+          <h1>Home</h1>
         </>
       );
     }
