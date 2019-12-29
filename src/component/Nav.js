@@ -42,7 +42,7 @@ class Nav extends React.Component{
     render(){
         return(
             <>
-            <Router basename={ process.env.PUBLIC_URL}>
+            <Router>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <h2 className="navbar-brand" href="test">MyKKBOX</h2>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
