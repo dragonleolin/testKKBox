@@ -54,10 +54,11 @@ class Home extends React.Component{
               }
             }
           )
-          .then( res => {
+          .then( async (res) => {
             // console.log(7, res.data.data[0].title);
             let hitPlayList = res.data.data
-            this.setState({hitPlayList, token})
+            await this.setState({hitPlayList, token})
+            await this.props.NewHitPlayListsData(this.state.hitPlayList)
           })
           .catch(err => {
             console.log(err);

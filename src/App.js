@@ -1,19 +1,27 @@
 import React from "react";
 import Nav from './component/Nav'
-import {Route} from 'react-router-dom'
-import Home from './pages/Home'
-import ThemeList from './pages/ThemeList'
 
 class App extends React.Component {
+    constructor(props){
+      super(props);
+      this.state = {
+        token: "",
+      }
+    }
+    componentDidMount(){
+      this.getToken();
+    }
+
+    getToken = (token) => {
+      this.setState({token})
+    }
+
 
     render(){
       return (
         <>
-          <Nav />
-          {/* <Home/> */}
-          <Route exact path='/' component={Home}/>
-          {/* <Route path='/hitList' component={Home}/> */}
-          <Route path='/themeList' component={ThemeList}/>
+          <Nav navToken = { this.getToken.bind(this) }/>
+          {/* <h1>{ this.state.token }</h1> */}
         </>
       );
     }
